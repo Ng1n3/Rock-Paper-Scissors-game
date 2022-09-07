@@ -1,7 +1,6 @@
-let getComputerChoice = () => {
+let getComputerChoice = () => { // Random selection of game avatars.
     const x = ['Rock', 'Paper','Scissors'];
     var computerSelection = x[Math.floor(Math.random()* x.length)];
-    // console.log(computerSelection);
      return computerSelection;
 }
 
@@ -9,7 +8,7 @@ let getComputerChoice = () => {
 
 const computerSelection = getComputerChoice();
 
-let singleRound = (playerSelection, computerSelection) => {
+let singleRound = (playerSelection, computerSelection) => { //Rock-Paper-Scissors algorithm
     // var playerSelection = ['rock', 'paper', 'scissors'];
     
             switch (true) {
@@ -46,7 +45,7 @@ let singleRound = (playerSelection, computerSelection) => {
 
 
 
-let game = () => {
+let game = () => { // function to play game 5 times for a round.
     var playerScore = 0;
     var computerScore = 0;
     for (let i = 0; i < 5; i++) {
@@ -54,9 +53,10 @@ let game = () => {
         playerSelection = playerSelection.toLocaleLowerCase();
         getComputerChoice();
          singleRound(playerSelection, computerSelection);
+         console.log(singleRound(playerSelection, computerSelection))
          if (typeof playerSelection === 'string'){
             if((playerSelection == 'rock' && computerSelection == 'Scissors') || (playerSelection == 'paper' && computerSelection == 'Rock') || (playerSelection == 'scissors' && computerSelection == 'Paper'))
-            {
+            { // save game records for player and computer
                 playerScore += 1;
             } else if ((playerSelection == 'rock' && computerSelection == 'Paper') || (playerSelection == 'paper' && computerSelection == 'Scissors') || (playerSelection == 'scissors' && computerSelection == 'Rock'))
             {
@@ -67,7 +67,7 @@ let game = () => {
 
     }
 
-    if (playerScore > computerScore)
+    if (playerScore > computerScore) // choose who the winner is.
     {
         console.log('You won this round!');
     }else 
