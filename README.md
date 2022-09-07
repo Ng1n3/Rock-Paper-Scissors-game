@@ -6,7 +6,7 @@ I learnt more about funcion declaration with the use of ternary operator.
 I understood the reason and importance of adding comments to code.
 
 # Project Duration
-This project took 10Hours to complete.
+This project took 10 hours to complete.
 
 # Difficulty and Challenges
 Calling a function within a function.
