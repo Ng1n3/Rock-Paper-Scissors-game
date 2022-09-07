@@ -12,5 +12,5 @@ This project took 10 hours to complete.
 Calling a function within a function.
 
 # Project Credit
-A big thank you to Odin-Project for giving me a platform to learn more about JavaScript.
+A big thank you to THE ODIN PROJECT for giving me a platform to learn more about JavaScript.
 Many thanks to my mentor Jaqen for his guidance.
