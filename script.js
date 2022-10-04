@@ -1,81 +1,114 @@
-let getComputerChoice = () => { // Random selection of game avatars.
-    const x = ['Rock', 'Paper','Scissors'];
-    var computerSelection = x[Math.floor(Math.random()* x.length)];
-     return computerSelection;
+const rockButton = document.querySelector('.rock');
+const scissorsButton = document.querySelector('.scissors');
+const paperButton = document.querySelector('.paper');
+const result = document.querySelector('.result');
+const playerScoreSpan = document.getElementById('player-score');
+const computerScoreSpan = document.getElementById('computer-score');
+const winner_txt = document.querySelector('.winner-text');
+const round_winner = document.querySelector('.round-winner');
+
+
+
+//generate random game choice computer
+const getComputerChoice = () => {
+    const choice = ['Rock', 'Scissors', 'Paper']
+    var computerChoice = choice[Math.floor(Math.random()* choice.length)];
+     return computerChoice;
 }
 
+let playerScore = 0;
+let computerScore = 0;
 
-
-const computerSelection = getComputerChoice();
-
-let singleRound = (playerSelection, computerSelection) => { //Rock-Paper-Scissors algorithm
-    // var playerSelection = ['rock', 'paper', 'scissors'];
-    
-            switch (true) {
-            case playerSelection == 'rock' && computerSelection == 'Rock':
-                return 'We have a tie';
-
-            case playerSelection == 'rock' && computerSelection == 'Paper':
-                return 'You lost! Paper is greater than Rock';
-            
-            case playerSelection == 'rock' && computerSelection == 'Scissors':
-                return 'You won! Rock is greater than Scissors';
-
-            case playerSelection == 'paper' && computerSelection == 'Paper':
-                return 'We have a tie';
-            
-            case playerSelection == 'paper' && computerSelection == 'Rock':
-                return 'You won! Paper is greater than Rock';
-            
-            case playerSelection == 'paper' && computerSelection == 'Scissors':
-                return 'You lost! Scissors is greater than Paper';
-            
-            case playerSelection == 'scissors' && computerSelection == 'Scissors':
-                return 'We have a tie!';
-            
-            case playerSelection == 'scissors' && computerSelection == 'Paper':
-                return 'You have won! Scissors is greater than paper';
-            
-            case playerSelection == 'scissors' && computerSelection == 'Rock':
-                return 'You lost! Rock is greater than scissors';
-        }
+// game algorithm and function calls for events.
+const playRound = (playerSelection, computerChoice) => {
+    switch(true) {
+        case playerSelection === computerChoice:
+            drawGame(playerSelection, computerChoice);
+            break;
         
+        case playerSelection === 'Rock' && computerChoice === 'Scissors':
+            wonGame(playerSelection, computerChoice);
+            break;
         
-}
-
-
-
-let game = () => { // function to play game 5 times for a round.
-    var playerScore = 0;
-    var computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt('chooose your avatar: ');
-        playerSelection = playerSelection.toLocaleLowerCase();
-        getComputerChoice();
-         singleRound(playerSelection, computerSelection);
-         console.log(singleRound(playerSelection, computerSelection))
-         if (typeof playerSelection === 'string'){
-            if((playerSelection == 'rock' && computerSelection == 'Scissors') || (playerSelection == 'paper' && computerSelection == 'Rock') || (playerSelection == 'scissors' && computerSelection == 'Paper'))
-            { // save game records for player and computer
-                playerScore += 1;
-            } else if ((playerSelection == 'rock' && computerSelection == 'Paper') || (playerSelection == 'paper' && computerSelection == 'Scissors') || (playerSelection == 'scissors' && computerSelection == 'Rock'))
-            {
-                computerScore += 1;
-            }
-         } else 
-         alert('please check your spelling and try again');
-
+        case playerSelection === 'Paper' && computerChoice === 'Rock':
+            wonGame(playerSelection, computerChoice);
+            break;
+        
+        case playerSelection === 'Scissors' && computerChoice === 'Paper':
+            wonGame(playerSelection, computerChoice);
+            break;
+        
+        default:
+            lostGame(playerSelection, computerChoice);
+            break;
     }
-
-    if (playerScore > computerScore) // choose who the winner is.
-    {
-        console.log('You won this round!');
-    }else 
-        console.log('You lost this round!');
 }
 
-game();
+const drawGame = (playerSelection, computerChoice) => {
+    playerScoreSpan.textContent = playerScore;
+    computerScoreSpan.textContent = computerScore;
+    winner_txt.textContent = `We have a tie, you both picked ${playerSelection}`;
+}
 
+const lostGame = (playerSelection, computerChoice) => {
+    computerScore++;
+    playerScoreSpan.textContent =  playerScore;
+    computerScoreSpan.textContent = computerScore;
+    winner_txt.textContent = `you Lost!, ${computerChoice} is greater than ${playerSelection}`;
+    if(computerScore == 5) {
+        round_winner.textContent = `Bruv you lost :( Your score: ${playerScore} Computer Score: ${computerScore} pls click the reset button to restart game`;
+        endGame();
+    }
+}
 
-var playerSelection;
-console.log(singleRound(playerSelection, computerSelection));
+const wonGame = (playerSelection, computerChoice) => {
+    playerScore++;
+    playerScoreSpan.textContent = playerScore;
+    computerScoreSpan.textContent = computerScore;
+    winner_txt.textContent = `you Won!, ${playerSelection} is greater than ${computerChoice}`;
+    if(playerScore == 5) {
+        round_winner.textContent = `Nigga you just won :) Your score: ${playerScore} and computer Score: ${computerScore} pls click the reset button to restart game`;
+        endGame();
+    }
+}
+
+const endGame = () => {
+    rockButton.disabled = true;
+    paperButton.disabled = true;
+    scissorsButton.disabled = true;
+}
+
+const restartGame = () => {
+    restartScores();
+    rockButton.disabled = false;
+    paperButton.disabled = false;
+    scissorsButton.disabled = false;
+}
+
+const restartScores = () => {
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreSpan.textContent = playerScore;
+    computerScoreSpan.textContent = computerScore;
+    winner_txt.textContent = '';
+    round_winner.textContent = '';
+}
+
+rockButton.addEventListener('click', () => {
+const computerChoice = getComputerChoice();
+const playerSelection = 'Rock';
+playRound(playerSelection, computerChoice);
+console.log(computerChoice);
+});
+
+paperButton.addEventListener('click', () => {
+const computerChoice = getComputerChoice();
+const playerSelection = 'Paper';
+playRound(playerSelection, computerChoice);
+});
+
+scissorsButton.addEventListener('click', () => {
+const computerChoice = getComputerChoice();
+const playerSelection = 'Scissors';
+playRound(playerSelection, computerChoice);
+});
