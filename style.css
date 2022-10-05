@@ -10,10 +10,28 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     background-color: darkslategray;
+<<<<<<< HEAD
 }
 
 h2 {
     margin-top: 50px;
+=======
+    margin: 0 auto;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+h2 {
+    width: 450px;
+    margin: 50px auto;
+>>>>>>> rps-ui
     font-weight: 600;
     font-size: 35px;
     color: white;
@@ -21,6 +39,11 @@ h2 {
 }
 
 .runningScore {
+<<<<<<< HEAD
+=======
+    display: flex;
+    justify-content: center;
+>>>>>>> rps-ui
     margin: 30px auto;;
     padding: 20px 10px;
     width: 600px;
@@ -36,10 +59,13 @@ h2 {
     margin-left: 30px;
 }
 
+<<<<<<< HEAD
 .container {
 
 }
 
+=======
+>>>>>>> rps-ui
 button {
     width: 100px;
     font-size: 20px;
@@ -89,6 +115,10 @@ button {
 }
 
 .restart{
+<<<<<<< HEAD
+=======
+    align-self: center;
+>>>>>>> rps-ui
     margin-top: 30px;
     background-color: rgb(149, 118, 38);
     width: 200px;
@@ -112,17 +142,129 @@ button {
     font-size: 20px;
     height: 35px;
     margin: 30px auto;
+<<<<<<< HEAD
     border: none;
     border-radius: 10px;
+=======
+>>>>>>> rps-ui
     justify-self: center;
     color: white;
 }
 
 .round-winner {
+<<<<<<< HEAD
     font-size: 30px;
     color: white;
 }
 
+=======
+    font-size: 25px;
+    color: white;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .container {
+        width: 320px;
+        font-size: 60%;
+    }
+
+    .round-winner {
+        width: 300px;
+    }
+
+    .container2 {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .winner-text {
+        width: 280px;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+
+    .container {
+        width: 480px;
+        font-size: 60%
+    }
+
+    .runningScore {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;;
+        padding: 20px 10px;
+        width: 380px;
+        line-height: 1.6;
+        background: darkgray;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 300;
+        color: white;
+    }
+
+    .round-winner {
+        width: 400px;
+    }
+
+    .container2 {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .winner-text {
+        width: 400px;
+        margin: 30px auto;
+    }
+
+    
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+
+    .container {
+        width: 800px;
+    }
+
+    .round-winner {
+        width: 600px;
+    }
+
+    .container2 {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .winner-text {
+        width: 600px;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .container {
+        width: 1025px;
+    }
+
+    .round-winner {
+        width: 800px;
+    }
+
+    .container2 {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .winner-text {
+        width: 800px;
+        margin: 30px auto;
+    }
+}
+
+>>>>>>> rps-ui
 
 
 
