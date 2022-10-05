@@ -10,10 +10,21 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     background-color: darkslategray;
+    margin: 0 auto;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 0 auto;
+
 }
 
 h2 {
-    margin-top: 50px;
+    width: 450px;
+    margin: 50px auto;
     font-weight: 600;
     font-size: 35px;
     color: white;
@@ -21,6 +32,8 @@ h2 {
 }
 
 .runningScore {
+    display: flex;
+    justify-content: center;
     margin: 30px auto;;
     padding: 20px 10px;
     width: 600px;
@@ -32,12 +45,54 @@ h2 {
     color: white;
 }
 
-.computer {
-    margin-left: 30px;
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .container {
+        width: 320px;
+        font-size: 60%;
+    }
 }
 
-.container {
+@media (min-width: 481px) and (max-width: 800px) {
 
+    .container {
+        width: 480px;
+        font-size: 60%
+    }
+
+    .runningScore {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;;
+        padding: 20px 10px;
+        width: 380px;
+        line-height: 1.6;
+        background: darkgray;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 300;
+        color: white;
+    }
+
+    
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+
+    .container {
+        width: 800px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .container {
+        width: 1025px;
+    }
+}
+
+.computer {
+    margin-left: 30px;
 }
 
 button {
@@ -89,6 +144,7 @@ button {
 }
 
 .restart{
+    align-self: center;
     margin-top: 30px;
     background-color: rgb(149, 118, 38);
     width: 200px;
