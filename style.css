@@ -11,11 +11,14 @@ body {
     text-align: center;
     background-color: darkslategray;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 h2 {
     margin-top: 50px;
 =======
+=======
+>>>>>>> rps-ui
     margin: 0 auto;
 
 }
@@ -31,6 +34,9 @@ h2 {
 h2 {
     width: 450px;
     margin: 50px auto;
+<<<<<<< HEAD
+>>>>>>> rps-ui
+=======
 >>>>>>> rps-ui
     font-weight: 600;
     font-size: 35px;
@@ -40,6 +46,11 @@ h2 {
 
 .runningScore {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    display: flex;
+    justify-content: center;
+>>>>>>> rps-ui
 =======
     display: flex;
     justify-content: center;
@@ -60,10 +71,13 @@ h2 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .container {
 
 }
 
+=======
+>>>>>>> rps-ui
 =======
 >>>>>>> rps-ui
 button {
@@ -116,6 +130,10 @@ button {
 
 .restart{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    align-self: center;
+>>>>>>> rps-ui
 =======
     align-self: center;
 >>>>>>> rps-ui
@@ -143,8 +161,11 @@ button {
     height: 35px;
     margin: 30px auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
     border: none;
     border-radius: 10px;
+=======
+>>>>>>> rps-ui
 =======
 >>>>>>> rps-ui
     justify-self: center;
@@ -153,11 +174,14 @@ button {
 
 .round-winner {
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 30px;
     color: white;
 }
 
 =======
+=======
+>>>>>>> rps-ui
     font-size: 25px;
     color: white;
 }
@@ -264,6 +288,9 @@ button {
     }
 }
 
+<<<<<<< HEAD
+>>>>>>> rps-ui
+=======
 >>>>>>> rps-ui
 
 
