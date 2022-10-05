@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors-game
 Rock, Paper and Scissors games using HTML, CSS and JavaScript.
-#Live URL
+# Live URL
 https://ng1n3.github.io/Rock-Paper-Scissors-game/
 # What i learnt
 - Understanding callback functions
