@@ -1,16 +1,17 @@
 # Rock-Paper-Scissors-game
-A simple game about Rock Paper Scissors.
+Rock, Paper and Scissors games using HTML, CSS and JavaScript.
 # What i learnt
-I learnt more about calling a function within another function.
-I learnt more about funcion declaration with the use of ternary operator.
-I understood the reason and importance of adding comments to code.
+- Understanding callback functions
+- Understanding DOM manipulation
+- Git branching and merging.
 
 # Project Duration
-This project took 10 hours to complete.
+- This project took 30 hours.
 
 # Difficulty and Challenges
-Calling a function within a function.
+- Callback functions.
+- DOM manipulation.
 
 # Project Credit
-A big thank you to THE ODIN PROJECT for giving me a platform to learn more about JavaScript.
-Many thanks to my mentor Jaqen for his guidance.
+- A big thank you to THE ODIN PROJECT for giving me a platform to learn more about JavaScript.
+- Many thanks to my mentor Jaqen for his guidance.
