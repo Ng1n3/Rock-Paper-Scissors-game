@@ -45,52 +45,6 @@ h2 {
     color: white;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-    
-    .container {
-        width: 320px;
-        font-size: 60%;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 800px) {
-
-    .container {
-        width: 480px;
-        font-size: 60%
-    }
-
-    .runningScore {
-        display: flex;
-        justify-content: center;
-        margin: 30px auto;;
-        padding: 20px 10px;
-        width: 380px;
-        line-height: 1.6;
-        background: darkgray;
-        border-radius: 10px;
-        font-size: 20px;
-        font-weight: 300;
-        color: white;
-    }
-
-    
-}
-
-@media (min-width: 801px) and (max-width: 1024px) {
-
-    .container {
-        width: 800px;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-
-    .container {
-        width: 1025px;
-    }
-}
-
 .computer {
     margin-left: 30px;
 }
@@ -168,15 +122,115 @@ button {
     font-size: 20px;
     height: 35px;
     margin: 30px auto;
-    border: none;
-    border-radius: 10px;
     justify-self: center;
     color: white;
 }
 
 .round-winner {
-    font-size: 30px;
+    font-size: 25px;
     color: white;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .container {
+        width: 320px;
+        font-size: 60%;
+    }
+
+    .round-winner {
+        width: 300px;
+    }
+
+    .container2 {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .winner-text {
+        width: 280px;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+
+    .container {
+        width: 480px;
+        font-size: 60%
+    }
+
+    .runningScore {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;;
+        padding: 20px 10px;
+        width: 380px;
+        line-height: 1.6;
+        background: darkgray;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 300;
+        color: white;
+    }
+
+    .round-winner {
+        width: 400px;
+    }
+
+    .container2 {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .winner-text {
+        width: 400px;
+        margin: 30px auto;
+    }
+
+    
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+
+    .container {
+        width: 800px;
+    }
+
+    .round-winner {
+        width: 600px;
+    }
+
+    .container2 {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .winner-text {
+        width: 600px;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .container {
+        width: 1025px;
+    }
+
+    .round-winner {
+        width: 800px;
+    }
+
+    .container2 {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .winner-text {
+        width: 800px;
+        margin: 30px auto;
+    }
 }
 
 
