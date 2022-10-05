@@ -56,7 +56,7 @@ const lostGame = (playerSelection, computerChoice) => {
     computerScoreSpan.textContent = computerScore;
     winner_txt.textContent = `you Lost!, ${computerChoice} is greater than ${playerSelection}`;
     if(computerScore == 5) {
-        round_winner.textContent = `Bruv you lost :( Your score: ${playerScore} Computer Score: ${computerScore} pls click the reset button to restart game`;
+        round_winner.textContent = `Bruv you lost :( Your score: ${playerScore} Computer Score: ${computerScore} pls click the restart button to restart game`;
         endGame();
     }
 }
@@ -67,7 +67,7 @@ const wonGame = (playerSelection, computerChoice) => {
     computerScoreSpan.textContent = computerScore;
     winner_txt.textContent = `you Won!, ${playerSelection} is greater than ${computerChoice}`;
     if(playerScore == 5) {
-        round_winner.textContent = `Nigga you just won :) Your score: ${playerScore} and computer Score: ${computerScore} pls click the reset button to restart game`;
+        round_winner.textContent = `Nigga you just won :) Your score: ${playerScore} and computer Score: ${computerScore} pls click the restart button to restart game`;
         endGame();
     }
 }
